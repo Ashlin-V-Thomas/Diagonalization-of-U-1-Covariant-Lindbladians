@@ -22,3 +22,8 @@ This approach yields exact solutions for the eigenvalues and eigenvectors of the
 
 ## Usage
 To use the implementation, edit the 'input_parameters.dat' file to specify the details of your model. Then, run the 'diagonalize.py' script to obtain the eigenvalues and eigenvectors of the Lindbladian. The results will be saved in the 'output' directory.
+
+## Usage Restriction
+This repository is provided for viewing purposes only.
+
+No permission is granted to use, modify, or distribute this code without explicit written consent from the author.
