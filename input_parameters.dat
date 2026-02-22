@@ -1,0 +1,16 @@
+
+model_type = "oscillator"         # whether the model_type is "oscillator" or "spin"
+clean_outputs = True           # whether to clean the output directory before saving new results
+
+Hilbert_space_dimension = 60     # the dimension of the Hilbert space (e.g., the maximum occupation number for oscillator models or the spin quantum number for spin models)
+Hamiltonian = [1,0] # Since the Hamiltonian commutes with number operator, it can be expressed as a polynomial of the number operator. This list specifies the coefficients of the polynomial, starting from the constant term. For example, [1, 0, 2.0] corresponds to H = 1 + 0*n + 2.0*n^2.
+jump_operators = [ [0,1] , [0,4] , [1,3]] # A list specifying the powers of creation and annihilation operators in each jump operator in normal order. For example, [2,4] corresponds to a jump operator proportional to (a^\dagger)^2 * a^4. 
+decay_rates = [0.5, 1.0, 2.0] # A list specifying the decay rates associated with each jump operator. If not provided, it defaults to 1 for all jump operators.
+
+save_lindbladian = False          # whether to save the Lindbladian matrix to a file
+save_eigenvalues = True           # whether to save the eigenvalues of the Lindbladian to a file
+save_eigenvectors = True          # whether to save the eigenvectors of the Lindbladian to a file
+save_adjacency_matrix = False      # whether to save the adjacency matrix of the graph used in the diagonalization procedure to a file
+adj_mat_mode_to_save = [0,0]      # Specify the eigenmode lambda_{m,l} for which to save the adjacency matrix. The second entry l corresponds to the diagonal and the first entry is the index of the eigenvalue in the list of eigenvalues arising from that diagonal. 
+
+plot_spectrum = True              # whether to plot the spectrum of the save_lindbladian
